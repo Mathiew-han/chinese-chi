@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f7fb;
+  --foreground: #0b0c0f;
+  --font-geist-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 24px 70px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  --glass-shadow-soft: 0 16px 45px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 @theme inline {
@@ -14,13 +22,204 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #07080a;
+    --foreground: #f3f4f6;
+    --font-geist-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji";
+    --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --glass-bg: rgba(15, 16, 22, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 24px 70px rgba(0, 0, 0, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    --glass-shadow-soft: 0 16px 45px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.site-poster {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 110vh;
+  height: 110dvh;
+  pointer-events: none;
+  overflow: hidden;
+  border-bottom-left-radius: 100% 10vh;
+  border-bottom-right-radius: 100% 10vh;
+  background: linear-gradient(
+    145deg,
+    rgba(169, 140, 76, 0.95),
+    rgba(108, 149, 214, 0.95),
+    rgba(124, 43, 117, 0.95)
+  );
+  filter: url(#advanced-texture);
+}
+
+.site-poster-compact {
+  height: 40vh;
+  height: 40dvh;
+  border-bottom-left-radius: 100% 6vh;
+  border-bottom-right-radius: 100% 6vh;
+}
+
+.ripple-overlay {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 120%;
+  opacity: 0.6;
+  background:
+    radial-gradient(60% 60% at 20% 30%, rgba(255, 255, 255, 0.7), transparent 60%),
+    radial-gradient(40% 40% at 75% 20%, rgba(255, 255, 255, 0.45), transparent 65%),
+    repeating-radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.18) 0,
+      rgba(255, 255, 255, 0.18) 12px,
+      rgba(255, 255, 255, 0) 24px
+    );
+  mix-blend-mode: soft-light;
+  filter: blur(12px);
+}
+
+.site-poster::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(900px 520px at 18% 10%, rgba(255, 255, 255, 0.6), transparent 60%),
+    radial-gradient(720px 420px at 85% 18%, rgba(255, 255, 255, 0.28), transparent 62%),
+    radial-gradient(900px 520px at 45% 68%, rgba(0, 0, 0, 0.12), transparent 60%);
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+}
+
+.site-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.16)
+  );
+  opacity: 0.9;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(26px) saturate(175%);
+  backdrop-filter: blur(26px) saturate(175%);
+}
+
+.glass-soft {
+  background: color-mix(in oklab, var(--glass-bg) 82%, transparent);
+  border: 1px solid color-mix(in oklab, var(--glass-border) 70%, transparent);
+  box-shadow: var(--glass-shadow-soft);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+}
+
+.glass-panel {
+  width: 100%;
+  background: color-mix(in oklab, var(--glass-bg) 88%, transparent);
+  border: 1px solid color-mix(in oklab, var(--glass-border) 85%, transparent);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  backdrop-filter: blur(24px) saturate(170%);
+}
+
+.schedule-cell-primary {
+  background: color-mix(in oklab, #d7f3ff 60%, transparent);
+  color: color-mix(in oklab, var(--foreground) 85%, transparent);
+}
+
+.schedule-cell-keynote {
+  background: color-mix(in oklab, #c7f2e6 65%, transparent);
+  color: color-mix(in oklab, var(--foreground) 85%, transparent);
+}
+
+.schedule-cell-session {
+  background: color-mix(in oklab, #dbe7ff 65%, transparent);
+  color: color-mix(in oklab, var(--foreground) 85%, transparent);
+}
+
+.schedule-cell-break {
+  background: color-mix(in oklab, #f1ede3 55%, transparent);
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+}
+
+.schedule-cell-special {
+  background: color-mix(in oklab, #d8f5ef 55%, transparent);
+  color: color-mix(in oklab, var(--foreground) 85%, transparent);
+}
+
+.site-nav-link {
+  color: color-mix(in oklab, var(--foreground) 74%, transparent);
+  text-decoration: none;
+  padding: 0.3rem 0.45rem;
+  border-radius: 999px;
+  transition: background-color 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-nav-link:hover {
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--glass-bg) 72%, transparent);
+}
+
+.site-nav-link:active {
+  transform: translateY(0.5px);
+}
+
+.site-nav-link:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--foreground) 35%, transparent);
+  outline-offset: 2px;
+}
+
+.site-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--glass-border) 80%, transparent);
+  background: color-mix(in oklab, var(--glass-bg) 72%, transparent);
+  color: color-mix(in oklab, var(--foreground) 78%, transparent);
+  transition: background-color 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-chip:hover {
+  background: color-mix(in oklab, var(--glass-bg) 86%, transparent);
+}
+
+.site-chip:active {
+  transform: translateY(0.5px);
+}
+
+.site-chip:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--foreground) 35%, transparent);
+  outline-offset: 2px;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass,
+  .glass-soft {
+    background: color-mix(in oklab, var(--background) 78%, white);
+  }
 }

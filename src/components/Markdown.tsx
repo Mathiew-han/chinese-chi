@@ -134,7 +134,7 @@ function parseBlocks(markdown: string): Block[] {
 export function Markdown({ content }: { content: string }) {
   const blocks = parseBlocks(content);
   return (
-    <div className="prose prose-neutral max-w-none">
+    <div className="prose prose-neutral max-w-none prose-headings:tracking-tight prose-headings:text-black/85 prose-p:text-black/75 prose-li:text-black/70 dark:prose-headings:text-white/85 dark:prose-p:text-white/75 dark:prose-li:text-white/70">
       {blocks.map((b, idx) => {
         const key = `${b.kind}-${idx}`;
         if (b.kind === "h") {
