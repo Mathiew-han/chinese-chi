@@ -3,8 +3,21 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = {
-  /* config options here */
+type NextConfigWithServerActions = NextConfig & {
+  experimental?: NextConfig["experimental"] & {
+    serverActions?: {
+      bodySizeLimit?: string | number;
+      allowedOrigins?: string[];
+    };
+  };
+};
+
+const nextConfig: NextConfigWithServerActions = {
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "30mb",
+    },
+  },
 };
 
 export default withNextIntl(nextConfig);

@@ -4,6 +4,21 @@ import { useEffect, useMemo, useState } from "react";
 
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
+function detectLocaleFromPathname(pathname: string): string {
+  const first = pathname.split("/")[1] ?? "";
+  if (first === "en" || first === "zh-CN" || first === "zh-TW" || first === "pt") {
+    return first;
+  }
+  return "en";
+}
+
+function safeNextPath(value: string | null, fallback: string): string {
+  if (!value) return fallback;
+  if (!value.startsWith("/")) return fallback;
+  if (value.startsWith("//")) return fallback;
+  return value;
+}
+
 export default function AuthPage() {
   const supabase = useMemo(() => {
     try {
@@ -51,10 +66,17 @@ export default function AuthPage() {
 
     const origin = window.location.origin;
 
+    const locale = detectLocaleFromPathname(window.location.pathname);
+    const search = new URLSearchParams(window.location.search);
+    const next = safeNextPath(search.get("next"), `/${locale}/dashboard`);
+    const callbackUrl = new URL(`/${locale}/auth/callback`, origin);
+    callbackUrl.searchParams.set("next", next);
+
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${origin}/auth/callback`,
+        emailRedirectTo: callbackUrl.toString(),
+        shouldCreateUser: true,
       },
     });
 
@@ -144,7 +166,10 @@ export default function AuthPage() {
       return;
     }
 
-    window.location.href = "/dashboard";
+    const locale = detectLocaleFromPathname(window.location.pathname);
+    const search = new URLSearchParams(window.location.search);
+    const next = safeNextPath(search.get("next"), `/${locale}/dashboard`);
+    window.location.href = next;
   }
 
   async function signOut() {

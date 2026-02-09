@@ -5,6 +5,22 @@ import Stripe from "stripe";
 import { getEnv } from "@/lib/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
+const LOCALES = new Set(["en", "zh-CN", "zh-TW", "pt"]);
+
+function inferLocaleFromRequest(request: Request): string {
+  const referer = request.headers.get("referer");
+  if (referer) {
+    try {
+      const url = new URL(referer);
+      const first = url.pathname.split("/")[1] ?? "";
+      if (LOCALES.has(first)) return first;
+    } catch {
+      return "en";
+    }
+  }
+  return "en";
+}
+
 const PRICE_BY_KIND: Record<string, { amount: number; currency: string; name: string }> =
   {
     submission_fee: {
@@ -75,6 +91,7 @@ export async function POST(request: Request) {
   const stripe = new Stripe(stripeSecretKey);
 
   const origin = new URL(request.url).origin;
+  const locale = inferLocaleFromRequest(request);
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
@@ -90,8 +107,8 @@ export async function POST(request: Request) {
         quantity: 1,
       },
     ],
-    success_url: `${origin}/dashboard/billing/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/dashboard/billing/cancel`,
+    success_url: `${origin}/${locale}/dashboard/billing/success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${origin}/${locale}/dashboard/billing/cancel`,
     metadata: {
       order_id: order.id,
       user_id: user.id,
