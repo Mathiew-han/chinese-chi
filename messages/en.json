@@ -1,0 +1,76 @@
+{
+  "Header": {
+    "home": "Home",
+    "authors": "Authors",
+    "attend": "Attend",
+    "program": "Program",
+    "committee": "Committee",
+    "sponsorship": "Sponsorship",
+    "portal": "Portal",
+    "signin": "Sign in"
+  },
+  "Home": {
+    "title": "ICHEC 2026",
+    "tagline": "Inclusion · Intelligence · Connection",
+    "date": "November 23–26, 2026",
+    "location": "Wynn Palace, Macau SAR, China",
+    "importantDates": "Important Dates",
+    "cfp": "Call for Papers",
+    "program": "Program",
+    "aboutTitle": "About ICHEC 2026",
+    "aboutSubtitle": "An Open, Inclusive, and Future-Oriented HCI Community",
+    "aboutP1": "ICHEC 2026 will be held in Macau SAR, China, continuing the spirit of Human-Computer Interaction (HCI) and focusing on how Artificial Intelligence and emerging technologies intertwine with human values, culture, and lived experiences.",
+    "aboutP2": "The conference covers the full spectrum of HCI topics, from technical innovation to critical inquiry, and from creative expression to deployable systems. We welcome researchers, designers, artists, and practitioners from around the globe to share their work and perspectives.",
+    "aboutP3": "We encourage human-centered, responsible AI and interactive technology practices, promoting the effective translation of research into social applications to shape a more inclusive and resilient future technology ecosystem.",
+    "registerNow": "Register Now",
+    "themeTitle": "Theme",
+    "themeSubtitle": "Inclusion · Intelligence · Connection",
+    "themeDescription": "Bringing together diverse disciplines and cultural backgrounds, focusing on the social impact and ethical boundaries of human-AI collaboration, and strengthening mutual trust and co-creation in the wave of intelligence.",
+    "keynotesTitle": "Opening & Closing",
+    "keynotesSubtitle": "Keynote Speeches",
+    "viewDetails": "View Details",
+    "milestonesTitle": "Key Milestones",
+    "milestonesSubtitle": "Important Dates",
+    "viewSchedule": "View Full Schedule",
+    "contact": "Contact",
+    "backToHome": "Back to Home",
+    "attend": "Attend"
+  },
+  "Shell": {
+    "titles": {
+      "about": "About ICHEC 2026",
+      "important-dates": "Important Dates",
+      "cfp": "Call for Papers",
+      "keynotes": "Keynotes",
+      "program": "Program",
+      "registration": "Registration",
+      "venue": "Venue",
+      "committees": "Committee",
+      "sponsors": "Sponsorship",
+      "news": "News",
+      "dashboard": "Dashboard",
+      "admin": "Admin",
+      "auth": "Sign in"
+    },
+    "footer": {
+      "rights": "© 2026 Chinese CHI. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact Us"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "background": "Conference Background & Imagery",
+    "organization": "Organization Team",
+    "homepage": "Homepage",
+    "venue": "Venue & Event Spaces",
+    "overview": "Program Overview",
+    "toBeUpdated": "⚠️ 2025 version for reference - To be updated for 2026",
+    "detailedProgram": "Detailed Program",
+    "day1": "Day 1",
+    "day2": "Day 2",
+    "day3": "Day 3"
+  }
+}

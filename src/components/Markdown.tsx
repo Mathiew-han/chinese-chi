@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import type { ReactNode } from "react";
 
 function renderInline(text: string): ReactNode[] {

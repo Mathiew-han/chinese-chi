@@ -1,0 +1,76 @@
+{
+  "Header": {
+    "home": "Início",
+    "authors": "Autores",
+    "attend": "Participar",
+    "program": "Programa",
+    "committee": "Comitê",
+    "sponsorship": "Patrocínio",
+    "portal": "Portal",
+    "signin": "Entrar"
+  },
+  "Home": {
+    "title": "ICHEC 2026",
+    "tagline": "Inclusão · Inteligência · Conexão",
+    "date": "23–26 de novembro de 2026",
+    "location": "Wynn Palace, Macau, China",
+    "importantDates": "Datas Importantes",
+    "cfp": "Chamada de Trabalhos",
+    "program": "Programa da Conferência",
+    "aboutTitle": "Sobre o ICHEC 2026",
+    "aboutSubtitle": "Uma Comunidade de IHC Aberta, Inclusiva e Voltada para o Futuro",
+    "aboutP1": "O ICHEC 2026 será realizado em Macau, China, dando continuidade ao espírito da Interação Humano-Computador (IHC) e focando em como a Inteligência Artificial e as tecnologias emergentes se entrelaçam com os valores humanos, a cultura e as experiências de vida.",
+    "aboutP2": "A conferência abrange todo o espectro de tópicos de IHC, desde a inovação técnica até a investigação crítica, e da expressão criativa a sistemas implementáveis. Convidamos pesquisadores, designers, artistas e especialistas técnicos de todo o mundo a compartilhar seus resultados e pontos de vista.",
+    "aboutP3": "Incentivamos práticas de IA e tecnologia interativa centradas no ser humano e responsáveis, promovendo a tradução eficaz dos resultados da pesquisa em aplicações sociais para moldar um ecossistema tecnológico futuro mais inclusivo e resiliente.",
+    "registerNow": "Inscreva-se Agora",
+    "themeTitle": "Tema",
+    "themeSubtitle": "Inclusão · Inteligência · Conexão",
+    "themeDescription": "Reunindo diversas disciplinas e contextos culturais, focando no impacto social e nos limites éticos da colaboração humano-IA e fortalecendo a confiança mútua e a cocriação na onda da inteligência.",
+    "keynotesTitle": "Abertura e Encerramento",
+    "keynotesSubtitle": "Palestras Principais de Abertura e Encerramento",
+    "viewDetails": "Ver Detalhes",
+    "milestonesTitle": "Principais Marcos",
+    "milestonesSubtitle": "Datas Importantes",
+    "viewSchedule": "Ver Agenda Completa",
+    "contact": "Contato",
+    "backToHome": "Voltar ao Início",
+    "attend": "Participar"
+  },
+  "Shell": {
+    "titles": {
+      "about": "Sobre o ICHEC 2026",
+      "important-dates": "Datas Importantes",
+      "cfp": "Chamada de Trabalhos",
+      "keynotes": "Palestras",
+      "program": "Programa",
+      "registration": "Inscrição",
+      "venue": "Local",
+      "committees": "Comitê",
+      "sponsors": "Patrocínio",
+      "news": "Notícias",
+      "dashboard": "Painel",
+      "admin": "Admin",
+      "auth": "Entrar"
+    },
+    "footer": {
+      "rights": "© 2026 Chinese CHI. Todos os direitos reservados.",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "contact": "Contate-nos"
+    }
+  },
+  "Common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "background": "Contexto e Imagem da Conferência",
+    "organization": "Equipe de Organização",
+    "homepage": "Página Inicial",
+    "venue": "Espaços do Evento",
+    "overview": "Visão Geral do Programa",
+    "toBeUpdated": "⚠️ Versão 2025 para referência - A ser atualizada para 2026",
+    "detailedProgram": "Programa Detalhado",
+    "day1": "Dia 1",
+    "day2": "Dia 2",
+    "day3": "Dia 3"
+  }
+}

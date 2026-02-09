@@ -1,0 +1,76 @@
+{
+  "Header": {
+    "home": "首页",
+    "authors": "征稿",
+    "attend": "参会",
+    "program": "议程",
+    "committee": "委员会",
+    "sponsorship": "赞助",
+    "portal": "门户",
+    "signin": "登录"
+  },
+  "Home": {
+    "title": "ICHEC 2026",
+    "tagline": "包容 · 智能 · 连接",
+    "date": "2026年11月23–26日",
+    "location": "中国澳门永利皇宫",
+    "importantDates": "重要日期",
+    "cfp": "征稿与征集",
+    "program": "大会日程",
+    "aboutTitle": "关于 ICHEC 2026",
+    "aboutSubtitle": "开放、包容、面向未来的人机交互共同体",
+    "aboutP1": "ICHEC 2026 将在中国澳门举办，延续人机交互（HCI）精神，聚焦人工智能与新兴技术如何与人类价值、文化和生活经验交织。作为从 Chinese CHI 升级而来的国际平台，我们期待连接研究、设计、艺术与产业实践，推动跨学科的对话与合作。",
+    "aboutP2": "大会覆盖 HCI 全域议题，从技术创新到批判性探究、从创意表达到可部署系统，欢迎来自全球的研究者、设计师、艺术家与技术专家共同分享成果与观点。",
+    "aboutP3": "我们鼓励以人为本、负责任的 AI 与交互技术实践，促进研究成果向社会应用的有效转化，塑造更包容、更具韧性的未来技术生态。",
+    "registerNow": "立即注册",
+    "themeTitle": "主题",
+    "themeSubtitle": "包容 · 智能 · 连接",
+    "themeDescription": "汇聚多元学科与文化背景，关注人机协作的社会影响与伦理边界，在智能化浪潮中强化人与技术的互信与共创。",
+    "keynotesTitle": "开幕与闭幕",
+    "keynotesSubtitle": "开幕与闭幕主旨演讲",
+    "viewDetails": "查看详细信息",
+    "milestonesTitle": "重要时间节点",
+    "milestonesSubtitle": "重要时间节点",
+    "viewSchedule": "查看完整日程",
+    "contact": "联系我们",
+    "backToHome": "回到首页",
+    "attend": "参会"
+  },
+  "Shell": {
+    "titles": {
+      "about": "关于 ICHEC 2026",
+      "important-dates": "重要日期",
+      "cfp": "征稿",
+      "keynotes": "主旨演讲",
+      "program": "大会日程",
+      "registration": "参会注册",
+      "venue": "地点",
+      "committees": "委员会",
+      "sponsors": "赞助",
+      "news": "新闻",
+      "dashboard": "控制面板",
+      "admin": "管理",
+      "auth": "登录"
+    },
+    "footer": {
+      "rights": "© 2026 Chinese CHI. 版权所有。",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "contact": "联系我们"
+    }
+  },
+  "Common": {
+    "loading": "加载中...",
+    "error": "出错了",
+    "background": "会议背景与形象",
+    "organization": "组织团队",
+    "homepage": "个人主页",
+    "venue": "分会场与活动空间",
+    "overview": "议程概览",
+    "toBeUpdated": "⚠️ 2025 版本仅供参考 - 2026 版本待更新",
+    "detailedProgram": "三日详细议程",
+    "day1": "第一天",
+    "day2": "第二天",
+    "day3": "第三天"
+  }
+}
